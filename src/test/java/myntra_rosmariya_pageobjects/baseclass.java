@@ -5,8 +5,8 @@ package myntra_rosmariya_pageobjects;
 
 import java.util.Properties;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.config.PropertyGetter.PropertyCallback;
+
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -23,21 +23,26 @@ public class baseclass {
 	Readconfig readconfig = new Readconfig();
 	
 	public String baseUrl = readconfig.getApplicationUrl();
-
-			//readconfig.getApplicationUrl();
+    public String URL = readconfig.getLoggin();
+    public String EMAIL = readconfig.getUname();
+    public String PASSWORD = readconfig.getpasswd();
+    public String GETURL = readconfig.geturl();
+			
 
 	public static WebDriver driver;
 
-	@BeforeClass
+@BeforeClass
 	public void setup()
 	{
 		
 		driver = new ChromeDriver();
-	}
-   @AfterClass
+		driver.manage().window().maximize();
+	}}
+/*@AfterClass
     public void tearDown()
       {
           driver.quit();
       }
    
 }
+*/

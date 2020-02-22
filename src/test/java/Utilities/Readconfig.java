@@ -27,9 +27,24 @@ public class Readconfig {
 	}
 	public String getLoggin()
 	{
-		String path = pro.getProperty("url");
+		String path = pro.getProperty("URL");
 		return path;
 	}
+	public String getUname()
+	{
+		String EMAIL = pro.getProperty("EMAIL");
+		return EMAIL;
+	}
+	 public String getpasswd()
+	 {
+		 String PASSWORD =pro.getProperty("PASSWORD");
+		return PASSWORD;
+	}
+	 public String geturl()
+	 {
+		 String GETURL =pro.getProperty("GETURL");
+		 return GETURL;
+	 }
 	
 
 }
